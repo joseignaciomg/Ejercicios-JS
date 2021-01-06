@@ -17,7 +17,5 @@ return newArray
 
 
 // opcion b
-var atendidos = clientes.map(function(a,b,c){
-    return a+b+c;
-})
+var atendidos = clientes.map(function(a,b,c));
 
