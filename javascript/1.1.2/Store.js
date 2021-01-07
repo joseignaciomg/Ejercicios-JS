@@ -7,7 +7,7 @@ var marie = clientes.slice(0,clientes.length);
 var marco = marie/2;
 
 //opcion a
-function atendidos(array,a){
+function atendidos(array,va){
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
         

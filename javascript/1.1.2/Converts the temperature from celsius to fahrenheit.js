@@ -1,0 +1,1 @@
+// Construct a program that: Describes what the program does at the top of the function. 1Takes in a celsius temperature. 2 Converts the temperature from celsius to fahrenheit. The code for the conversion is below: var fahrenheit = celsiusTemp * 9 / 5 + 32; 3 Outputs the fahrenheit temperature to the console.
