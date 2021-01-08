@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pag{
+            display: grid;
+            grid: 5em 1fr 1fr 1fr / 5em 1fr 1fr;
+            grid-template-areas:
+            "fechayhora fechayhora"
+            "mesyaño seleccion"
+            "calendario calendario"
+            }
+        .fechayhora{
+            grid-area: fechayhora;
+            }
+        .mesyaño{
+            grid-area: mesyaño;
+        }
+        .seleccion{
+            grid-area: seleccion;
+        }
+        .calendario{
+            grid-area: calendario;
+        }
+        .semanas{
+
+        }
+        .dias{
+            
+        }
+</style>
+</head>
+<body>
+    <div class="pag">
+        <div class="fechayhora"> 
+            <p>12:25:36</p>                 
+            <p>09/01/2021</p>
+        </div>
+        <div class="mesyaño">Enero de 2021</div>
+        <div class="seleccion">flechas</div>
+        <div class="calendario">dias</div>
+    </div>
+</body>
+</html>

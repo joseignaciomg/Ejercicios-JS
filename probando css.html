@@ -5,69 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
-            font-size: 100%;
+        *{
+            text-align: center;
+            color:  #2196F3;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: xx-large;
         }
-        .content{
-            margin: auto;
-            width: 85%;
-            display: flex;
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto; /* auto	Default value. The size of the rows is determined by the size of the largest item in the row*/ 
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
         }
-        .column1{
-            display: flex; 1;
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
         }
-        .column2{
-            display: flex; 2;
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
-        .opciona{
-            border: 5px solid rebeccapurple;
-            background-color: rgb(252, 215, 255);
-            padding: 40px;
-            margin: 40px;
-            height: 5em; 
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: small;
-            line-height: 1.6;
+        .item7 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }        
+        .item8 {
+            grid-column-start: 1;
+            grid-column-end: 4;
         }
-        .opcionb{
-            box-sizing: border-box;
-            border: 5px solid rgb(53, 53, 53);
-            background-color: rgb(240, 240, 240);
-            padding: 40px;
-            margin: 40px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: small; color: slategray;
-            line-height: 1.6;
+        .grid-container2{
+            grid-template-columns: 40px 50px auto 50px 40px;
+            grid-template-rows: 25% 100px auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }        
+        .grid-container2 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
         }
-        .opcionc{
-            border: 5px solid rgb(47, 94, 61);
-            background-color: rgb(133, 160, 101);
-            padding: 40px;
-            margin: 40px;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: x-large; color: rgb(255, 255, 255);
-            line-height: 1.6;
+        .item28{
+            grid-column: 3 / span 2;
+            grid-row: third-line / 4;
         }
     </style>
-    
 </head>
 <body>
-    <div class="margen automático">
-        <div class="opciona" class="content">Vamos a practicar propiedades css</div>
-        <div class="opcionb" class="content">http://127.0.0.1:5500/</div>
-        <div class="opcionc">
-            <div class="opcionb">
-                <p>rem - tamaño letra M del padre (root) - por defecto todos los navegadores tienen 16px </p>
-            </div>
-            <p>em - tamaño de la letra M (letra más grande) - 1em=16px</p>
-            <p>% - porcentaje del ancho de la ventana usar siempre en anchos </p>
-            <p> Transformar px to em (dividir entre16) : <br> 50/16 = 3.125em</p>
-            <p>
-        </div>
         <div>
-            <p class="opcionb">objeto1</p>
-            <p class="opcionb">objeto2</p>
-            <p class="opcionb">objeto3</p>
+            <p class="titulo">
+                LETS TRY CSS Grid Layout Module - auto
+            </p>
+        <div class="grid-container">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>  
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+            <div class="item8">8</div>  
+          </div>
+          
+        <div>
+            <p class="titulo">
+                LETS TRY CSS Grid Layout Module - fr
+            </p>
+        </div>
+        </div>
+        <div class="grid-container2">
+            <div><p class="item21">1</p></div> 
+            <div><p class="item22">2</p></div>
+            <div><p class="item23">3</p></div>
+            <div><p class="item24">4</p></div>
+            <div><p class="item25">5</p></div>
+            <div><p class="item26">6</p></div>
+            <div><p class="item27">7</p></div>
+            <div><p class="item28">8</p></div>
         </div>
     </div> 
 </body>
