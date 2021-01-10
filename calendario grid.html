@@ -3,62 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336844955e.js" crossorigin="anonymous"></script>    
     <title>Calendario con Grid</title>
     <style>
+        /*-------------------------Reset de los parametros por defecto del navegador----------------- */
         *{  
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0em;
             padding: 0em;
         }
+        /*-------------------------grid competo----------------- */
         .pag{
             position: fixed;
             bottom: 0em;
             right: 0em;
-            width: 22em;
             display: grid;
+            box-shadow: 0em 0em 0.8em rgb(29, 29, 29);
+            grid-template-columns: auto 2.8em 2.8em;
+            grid-template-rows: auto; /*¿1columna y 3 filas? */
             grid-template-areas:
             "fechayhora fechayhora fechayhora"
             "mesyaño seleccion1 seleccion2"
             "calendario calendario calendario"
         }
+        /*-------------------------items del grid competo----------------- */
         .fechayhora{
             grid-area: fechayhora;
             padding: 1em;
-            border-bottom: 0.05em solid #323232;
+            border: 0.15em solid #323232;
             background-color: #252525
             }
-        .hora{
-            color: white;
-            font-weight: lighter;
-            font-size: 3em;
-        }
-        .fecha{
-            color: #A6D8FF; 
-            font-size: 0.9em;                 
-        }
         .mesyaño{
-            color: #DFDFDF;
+            color: #DFDFDF;            
+            border-left: 0.15em solid #323232;
             padding: 1em;
             grid-area: mesyaño;
             background-color: #252525
         }
         .seleccion1{
             grid-area: seleccion1;
-            padding: 1em;
+            color: #DFDFDF;            
+            padding: 1em 1em 1em 0em;
             background-color: #252525
         }
         .seleccion2{
             grid-area: seleccion2;
-            padding: 1em;
-            background-color: #252525
+            color: #DFDFDF;                        
+            padding: 1em 1em 1em 0em;
+            background-color: #252525;            
+            border-right: 0.15em solid #323232;
         }
         .calendario{            
             grid-area: calendario;
+            border-left: 0.15em solid #323232;
             padding: 0em 1em 1em 1em;
-            background-color:#252525     
+            background-color:#252525;  
         }
-        .grid-container{          
+        /*-------------------------clases grid completo----------------- */
+        .fecha{
+            color: #A6D8FF;
+            font-size: 0.9em;                 
+        }
+                
+        .hora{
+            color: white;
+            font-weight: lighter;
+            font-size: 3em;
+        }
+        /*-------------------------hover grid completo----------------- */
+        .seleccion1:hover{
+            color: white;
+        }
+        .seleccion2:hover{
+            color: white;
+        }
+        .fecha:hover{
+            color: grey;
+        }
+        .mesyaño:hover{
+            color: white;
+        }        
+        /*-------------------------Aquí el grid del calendario----------------- */
+        .grid-container{    
+                  
             display: grid;
             grid-template-areas:
             "nombredeldia"
@@ -69,151 +97,167 @@
             "semana5"
             "semana6"
         }
+        /*-------------------------Aquí los items del grid del calendario----------------- */
         .semana0{            
             grid-area: nombredeldia;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
-            "dia dia dia dia dia dia dia";
+            "nombredia nombredia nombredia nombredia nombredia nombredia nombredia";
         }
         .semana{
             grid-area: semana1;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
         .semana2{
             grid-area: semana2;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
         .semana3{
             grid-area: semana3;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
         .semana4{
             grid-area: semana4;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
         .semana5{
             grid-area: semana5;
-            height: 40px;
+            height: 2.5em;
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
         .semana6{
             grid-area: semana6;
-            height: 40px;
+            height: 2.5em;            
             display: grid;
-            grid-template-columns: repeat(7, 46px);
+            grid-template-columns: repeat(7, 2.8em);
             grid-template-areas:
             "dia dia dia dia dia dia dia";
         }
+        /*-------------------------Aquí las clases----------------- */
         .dia{
             font-weight: 300;
             text-align: center;
-            padding-top: 6px;
+            padding-top: 0.5em;
+            color: white;
+        }        
+        .nombredia{
+            font-size: 0.8em;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 0.5em;
             color: white;
         }
         .otromes{
             color: #696969;
         }
+        /*-------------------------hovers----------------- */
         .dia:hover{
+            border: 0.1em solid grey;
+            padding-top: 0.4em;
         }
 </style>
 </head>
 <body>
     <div class="pag">
-        <div class="fechayhora"> 
-            <p class="hora">12:25:36</p>                 
-            <p class="fecha">Lunes, 11 de Enero de 2021 </p>
-        </div>
-        <div class="mesyaño">enero de 2021</div>
-        <div class="seleccion1">atras</div>
-        <div class="seleccion2">adelante</div>
-        <div class="calendario">
-            <div class="grid-container">
-                <div class="semana0">
-                    <div class="dia">L</div>
-                    <div class="dia">M</div>
-                    <div class="dia">X</div>
-                    <div class="dia">J</div>
-                    <div class="dia">V</div>
-                    <div class="dia">S</div>
-                    <div class="dia">D</div>
-                </div>
-                <div class="semana">
-                    <div class="dia otromes">28</div>
-                    <div class="dia otromes">29</div>
-                    <div class="dia otromes">30</div>
-                    <div class="dia otromes">31</div>
-                    <div class="dia">1</div>
-                    <div class="dia">2</div>
-                    <div class="dia">3</div>
-                </div>
-                <div class="semana2">
-                    <div class="dia">4</div>
-                    <div class="dia">5</div>
-                    <div class="dia">6</div>
-                    <div class="dia">7</div>
-                    <div class="dia">8</div>
-                    <div class="dia">9</div>
-                    <div class="dia">10</div>
-                </div>
-                <div class="semana3">
-                    <div class="dia">11</div>
-                    <div class="dia">12</div>
-                    <div class="dia">13</div>
-                    <div class="dia">14</div>
-                    <div class="dia">15</div>
-                    <div class="dia">16</div>
-                    <div class="dia">17</div>
-                </div>
-                <div class="semana4">                
-                    <div class="dia">18</div>
-                    <div class="dia">19</div>
-                    <div class="dia">20</div>
-                    <div class="dia">21</div>
-                    <div class="dia">22</div>
-                    <div class="dia">23</div>
-                    <div class="dia">24</div>
-                </div>
-                <div class="semana5">                
-                    <div class="dia">25</div>
-                    <div class="dia">26</div>
-                    <div class="dia">27</div>
-                    <div class="dia">28</div>
-                    <div class="dia">29</div>
-                    <div class="dia">30</div>
-                    <div class="dia">31</div>
-                </div>
-                <div class="semana6">                                
-                    <div class="dia otromes">1</div>
-                    <div class="dia otromes">2</div>
-                    <div class="dia otromes">3</div>
-                    <div class="dia otromes">4</div>
-                    <div class="dia otromes">5</div>
-                    <div class="dia otromes">6</div>
-                    <div class="dia otromes">7</div>
+            <div class="fechayhora"> 
+                <p class="hora">12:25:36</p>                 
+                <p class="fecha">Lunes, 11 de Enero de 2021 </p>
+            </div>
+            <div class="mesyaño">enero de 2021</div>
+            <div class="seleccion1">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="seleccion2">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="calendario">
+                <div class="grid-container">
+                    <div class="semana0">
+                        <div class="nombredia">L</div>
+                        <div class="nombredia">M</div>
+                        <div class="nombredia">X</div>
+                        <div class="nombredia">J</div>
+                        <div class="nombredia">V</div>
+                        <div class="nombredia">S</div>
+                        <div class="nombredia">D</div>
+                    </div>
+                    <div class="semana">
+                        <div class="dia otromes">28</div>
+                        <div class="dia otromes">29</div>
+                        <div class="dia otromes">30</div>
+                        <div class="dia otromes">31</div>
+                        <div class="dia">1</div>
+                        <div class="dia">2</div>
+                        <div class="dia">3</div>
+                    </div>
+                    <div class="semana2">
+                        <div class="dia">4</div>
+                        <div class="dia">5</div>
+                        <div class="dia">6</div>
+                        <div class="dia">7</div>
+                        <div class="dia">8</div>
+                        <div class="dia">9</div>
+                        <div class="dia">10</div>
+                    </div>
+                    <div class="semana3">
+                        <div class="dia">11</div>
+                        <div class="dia">12</div>
+                        <div class="dia">13</div>
+                        <div class="dia">14</div>
+                        <div class="dia">15</div>
+                        <div class="dia">16</div>
+                        <div class="dia">17</div>
+                    </div>
+                    <div class="semana4">                
+                        <div class="dia">18</div>
+                        <div class="dia">19</div>
+                        <div class="dia">20</div>
+                        <div class="dia">21</div>
+                        <div class="dia">22</div>
+                        <div class="dia">23</div>
+                        <div class="dia">24</div>
+                    </div>
+                    <div class="semana5">                
+                        <div class="dia">25</div>
+                        <div class="dia">26</div>
+                        <div class="dia">27</div>
+                        <div class="dia">28</div>
+                        <div class="dia">29</div>
+                        <div class="dia">30</div>
+                        <div class="dia">31</div>
+                    </div>
+                    <div class="semana6">                                
+                        <div class="dia otromes">1</div>
+                        <div class="dia otromes">2</div>
+                        <div class="dia otromes">3</div>
+                        <div class="dia otromes">4</div>
+                        <div class="dia otromes">5</div>
+                        <div class="dia otromes">6</div>
+                        <div class="dia otromes">7</div>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>
