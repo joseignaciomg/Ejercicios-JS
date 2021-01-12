@@ -21,10 +21,11 @@
             position: fixed;
             bottom: 0em;
             right: 0em;
+            width: 18em;
             display: grid;
             box-shadow: 0em 0em 0.8em rgb(29, 29, 29);
             grid-template-columns: auto 2.8em 2.8em;
-            grid-template-rows: auto; /*¿1columna y 3 filas? */
+            grid-template-rows: auto;
             grid-template-areas:
             "fechayhora fechayhora fechayhora"
             "mesyaño seleccion1 seleccion2"
@@ -46,12 +47,14 @@
         }
         .seleccion1{
             grid-area: seleccion1;
+            width: 2.8em;
             color: #DFDFDF;            
             padding: 1em 1em 1em 0em;
             background-color: #252525
         }
         .seleccion2{
             grid-area: seleccion2;
+            width: 2.8em;
             color: #DFDFDF;                        
             padding: 1em 1em 1em 0em;
             background-color: #252525;            
@@ -88,76 +91,13 @@
             color: white;
         }        
         /*-------------------------Aquí el grid del calendario----------------- */
-        .grid-container{    
-                  
+        .grid-container{                  
             display: grid;
+            grid-template-rows: auto;
             grid-template-areas:
-            "nombredeldia"
-            "semana1"
-            "semana2"
-            "semana3" 
-            "semana4"
-            "semana5"
-            "semana6"
+            "dia dia dia dia dia dia dia"
         }
-        /*-------------------------Aquí los items del grid del calendario----------------- */
-        .semana0{            
-            grid-area: nombredeldia;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "nombredia nombredia nombredia nombredia nombredia nombredia nombredia";
-        }
-        .semana{
-            grid-area: semana1;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        .semana2{
-            grid-area: semana2;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        .semana3{
-            grid-area: semana3;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        .semana4{
-            grid-area: semana4;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        .semana5{
-            grid-area: semana5;
-            height: 2.5em;
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        .semana6{
-            grid-area: semana6;
-            height: 2.5em;            
-            display: grid;
-            grid-template-columns: repeat(7, 2.8em);
-            grid-template-areas:
-            "dia dia dia dia dia dia dia";
-        }
-        /*-------------------------Aquí las clases----------------- */
+        /*----------------Aquí las clases del calendario----------------- */
         .dia{
             font-weight: 300;
             text-align: center;
@@ -177,7 +117,7 @@
         /*-------------------------hovers----------------- */
         .dia:hover{
             border: 0.1em solid grey;
-            padding-top: 0.4em;
+            padding-top: 0.1em;
         }
 </style>
 </head>
@@ -196,7 +136,6 @@
             </div>
             <div class="calendario">
                 <div class="grid-container">
-                    <div class="semana0">
                         <div class="nombredia">L</div>
                         <div class="nombredia">M</div>
                         <div class="nombredia">X</div>
@@ -204,8 +143,6 @@
                         <div class="nombredia">V</div>
                         <div class="nombredia">S</div>
                         <div class="nombredia">D</div>
-                    </div>
-                    <div class="semana">
                         <div class="dia otromes">28</div>
                         <div class="dia otromes">29</div>
                         <div class="dia otromes">30</div>
@@ -213,8 +150,6 @@
                         <div class="dia">1</div>
                         <div class="dia">2</div>
                         <div class="dia">3</div>
-                    </div>
-                    <div class="semana2">
                         <div class="dia">4</div>
                         <div class="dia">5</div>
                         <div class="dia">6</div>
@@ -222,35 +157,27 @@
                         <div class="dia">8</div>
                         <div class="dia">9</div>
                         <div class="dia">10</div>
-                    </div>
-                    <div class="semana3">
                         <div class="dia">11</div>
                         <div class="dia">12</div>
                         <div class="dia">13</div>
                         <div class="dia">14</div>
                         <div class="dia">15</div>
                         <div class="dia">16</div>
-                        <div class="dia">17</div>
-                    </div>
-                    <div class="semana4">                
+                        <div class="dia">17</div>      
                         <div class="dia">18</div>
                         <div class="dia">19</div>
                         <div class="dia">20</div>
                         <div class="dia">21</div>
                         <div class="dia">22</div>
                         <div class="dia">23</div>
-                        <div class="dia">24</div>
-                    </div>
-                    <div class="semana5">                
+                        <div class="dia">24</div>      
                         <div class="dia">25</div>
                         <div class="dia">26</div>
                         <div class="dia">27</div>
                         <div class="dia">28</div>
                         <div class="dia">29</div>
                         <div class="dia">30</div>
-                        <div class="dia">31</div>
-                    </div>
-                    <div class="semana6">                                
+                        <div class="dia">31</div>              
                         <div class="dia otromes">1</div>
                         <div class="dia otromes">2</div>
                         <div class="dia otromes">3</div>
@@ -258,7 +185,6 @@
                         <div class="dia otromes">5</div>
                         <div class="dia otromes">6</div>
                         <div class="dia otromes">7</div>
-                    </div>
                 </div>
             </div>
     </div>
