@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        funcion* days(from,to){ //* es un generador 
+        for(let i =from;i<to;i++){    
+        Yield i 
+    
+    } 
+    
+    } 
+    
+    for(v od days(1,31)){ 
+    
+        let div = document.createElement(“div”) 
+    
+        let text = document.createTextNode(v) 
+    
+        div.appendChild(text) 
+    
+        div.setAttribute(“data-day”, v) 
+    
+        document.body.appendChild(div) 
+    
+    } </script>
+    
+</body>
+</html>
