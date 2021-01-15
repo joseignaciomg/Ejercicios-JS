@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario sin html</title>
+    <style>
+        .grid-container{  
+            width: 20em;                
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "dia dia dia dia dia dia dia" 
+        }
+        .dia{
+            grid-area: dia;
+            font-weight: 300;
+            width: 2.5em;
+            height: 2.1em;
+            margin: 0.1em;
+            text-align: center;
+            padding-top: 0.7em;
+            color: rgb(0, 0, 0);
+            border: 0.1em solid black;
+    </style>
 </head>
 <body>
     <script>
@@ -16,15 +35,12 @@
         let div = document.createElement('div')
         let text = document.createTextNode(v)
         div.appendChild(text)
+        div.classList.add('dia')
         div.setAttribute('data-day',v)
         document.body.appendChild(div)
     }
-    function señalardia(){
-        var señalado = document.getElementById(v)
-        señalado.addEventListener('click', mostrar)
-    }
-    function mostrar(){
-
+    document.getElementById("dia");addEventListener("click"){
+        document.style.setProperty("elegido","")
     }
     div.addEventListener('click', )
     </script>
