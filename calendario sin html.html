@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario sin html</title>
+    <style>
+        .grid-container{  
+            width: 20em;                
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "dia dia dia dia dia dia dia" 
+        }
+        .dia{
+            grid-area: dia;
+            font-weight: 300;
+            width: 2.5em;
+            height: 2.1em;
+            margin: 0.1em;
+            text-align: center;
+            padding-top: 0.7em;
+            color: rgb(0, 0, 0);
+            border: 0.1em solid black;
+        {
+    </style>
+</head>
+<html>
+    <body>
+        <script>
+            function* days(from,to){
+            for(let i=from;i<=to;i++){
+                yield i
+                }
+            }
+            for(v of days(1,31)){
+                let div = document.createElement('div')
+                let text = document.createTextNode(v)
+                div.appendChild(text)
+                div.classList.add('dia')
+                div.setAttribute('data-day',v)
+                document.body.appendChild(div)
+            }
+            function addText() {
+                var t2 = document.getElementById("t2");
+                t2.firstChild.nodeValue = "three";
+            }
+            function addevent(){
+                var el = document.getElementById("dia");
+                el.addEventListener("click", addyText ,false);
+            }
+        </script>
+    </body>
+</html>

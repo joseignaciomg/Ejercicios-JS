@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacer scroll-able una pagina</title>
+    <style>
+        /* Con esto permites scroll en todo el html*/
+        html{
+           scroll-behavior: smooth;  
+        }
+        /* Con esto permites scroll en el objeto que quieras*/
+        .scroll-container{
+            display: block;
+            width: 50em;
+            height: 30em;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+        .item{
+            background-color: cadetblue;
+            margin: 1em;
+            height: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>    
+</body>
+</html>

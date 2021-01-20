@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto ;
+            grid-template-rows: 8.75em 15.6em 8.75em 62.5em 87.5em 62.5em 13.75em;
+            grid-template-areas:
+            "header"
+            "ad"
+            "resultados"
+            "hoyNBA"
+            "videosNBA"
+            "masNBA"
+            "footer"
+        }
+        .header{
+            grid-area: header;
+            background-color: cornflowerblue;
+        }
+        .ad{
+            grid-area: ad;
+            background-color: rgb(209, 209, 209);
+        }
+        .resultados{
+            grid-area: resultados;
+            background-color: rgb(47, 90, 107);
+        }
+        .hoyNBA{
+            grid-area: hoyNBA;
+            background-color:rgb(163, 163, 163);        
+            display: grid;
+            grid-template-columns: 25em,1fr 25em,1fr 25em,1fr;
+            grid-template-rows: 20em 20em;
+            grid-template-areas:
+            "noticia1 noticia1 ad1"
+            "noticia2 noticia3 ad1"
+        }
+        .hoyNBA-grid-container{
+            display: grid;
+            grid-template-columns: 25em,1fr 25em,1fr 25em,1fr;
+            grid-template-rows: 20em 20em;
+            grid-template-areas:
+            "noticia1 noticia1 ad1"
+            "noticia2 noticia3 ad1"
+        }
+        .noticia1{
+            grid-area: noticia1;
+            background-color: gray;
+        }
+        .ad1{
+            grid-area: ad1;
+            background-color: honeydew;
+        }
+        .noticia2{
+            grid-area: noticia2;
+            background-color: indianred;
+        }
+        .noticia3{
+            grid-area: noticia3;
+            background-color: lemonchiffon;
+        }
+        .videosNBA{
+            grid-area: videosNBA;
+            background-color: rgb(24, 38, 100);
+        }
+        .masNBA{
+            grid-area: masNBA;
+            background-color: rgb(177, 177, 177);
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(34, 67, 139);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">header</div>
+        <div class="ad">ad</div>
+        <div class="resultados">resultados</div>
+        <div class="hoyNBA">hoyNBA</div>
+            <div class="hoyNBA-grid-container">Grid
+                <div class="noticia1">Noticia1</div>
+                <div class="noticia2">Noticia2</div>
+                <div class="noticia3">Noticia3</div>
+                <div class="ad1">ad1</div>
+            </div>    
+        <div class="videosNBA">videosNBA</div>
+        <div class="masNBA">masNBA</div>
+        <div class="footer">footer</div>
+    </div>    
+</body>
+</html>
