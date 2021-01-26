@@ -2,39 +2,65 @@
 <script>
     const esPalindrome = str => {
     // reemplazamos acentos, eliminamos espacios y caracteres no alfanuméricos
-    const s = str.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[\W_]/g, '');
+    const s = str.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[\W_]/g, '')
  
     // giramos la cadena y la comparamos con al cadena original
-    return s === [...s].reverse().join('');
+    return s === [...s].reverse().join('')
 }
 </script>
 
 <!--2. Diferencias entre flexbox y grid-->
 <p>La diferencia principal es que con Flexbox controlas una dimension(filas) y con Grid controlas dos dimensiones(filas y columnas). Con Grid decides la posicion de los elementos basandote en una reticula(que previamente has determinado las columas, filas y sus con tamaños) y con flexbox puedes controlar la altura de los items creando filas con misma altura(masonry).  </p>
 <!--1. crea un div-->
-<script>div = document.createElement(‘div’)</script> 
+<script>div = document.createElement('div')</script> 
 
 <!--2. crea un svg-->
-<script>document.createElementNS(‘Espaciodenombre’,’svg’)) </script>
+<script> document.createElementNS('Espaciodenombre','svg') </script>
 
 <!--3. agrega una clase al div creado en el punto 1-->
-<script>div.classList.add(‘red’)</script>
+<script>div.classList.add('red')</script>
 
 <!--4. agrega un estilo que cambie la propiedad color al punto 1-->
-<script>div.style.setProperty(‘color’,‘blue’) </script>
+<script>div.style.setProperty('color','blue') </script>
 
 <!--5. agrega un atributo id al punto 1-->
+<script>div.setAttribute('id','xnombre') </script>
 
 <!--6. crea un pagina en blanco y agrega al body el div con "hello world"-->
-
+<script>
+    text = document.createTextNode('Hello world') 
+    div.appendChild(text) 
+    document.body.appendChild(div) 
+</script>
 <!--7. crea un nuevo div y agregalo como hijo al punto 1 antes de "hello world"-->
+<script>
+    child = document.createElement('div')
+    div.insertBefore(child,text)
+</script>
 
 <!--8. dime los nodos que tiene el primer div-->
+<script>
+    div.childNodes
+</script>
 
 <!--9. dime los elementos que tiene el primer div-->
+<script>
+    div.chidren
+</script>
 
 <!--10. busca todos los div de la página-->
+<script>
+    document.querySelectorAll('div')
+</script>
 
 <!--11. busca los div que contienen la clase agregada al punto 3-->
+<script>
+    document.querySelectorAll(.blue)
+    document.getElementsByClassName('blue')
+    </script>
 
 <!--12. busca los div que tienen el id agregado en punto 5-->
+<script>
+    document.querySelectorAll('#xnombre')
+    document.getElementById('xnombre')
+</script>
